@@ -1,0 +1,17 @@
+{
+    "0000000000000002": {
+        "ip_address": "192.168.56.104",
+        "socket_port": "57554",
+        "status": "Connected"
+    },
+    "000096fe11ad3548": {
+        "ip_address": "192.168.56.104",
+        "socket_port": "57558",
+        "status": "Connected"
+    },
+    "0000000000000001": {
+        "ip_address": "192.168.56.104",
+        "socket_port": "57556",
+        "status": "Connected"
+    }
+}

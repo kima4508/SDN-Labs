@@ -1,0 +1,69 @@
+
+
+<html> 
+<head>
+    <meta http-equiv="refresh" content="10" /> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <title> Ryu Controller Stats</title>
+
+</head>
+<body>
+    <center>
+        <div style="height: 15vh; width: 70%;" > Total Packet In = {{ totalCount }}</div>
+        <div style="height: 70vh; width: 70%;">
+            <canvas id="finalGraph" ></canvas>
+        </div>
+    </center>
+
+<script>
+    var timestamps = {{ timestamps | tojson }}
+    var counts = {{ counts | tojson }}
+    new Chart(
+        "finalGraph",{
+        type: 'line',
+        data: {
+            labels: timestamps,
+            datasets: [{
+                label: 'Packet-In Packet Count',
+                backgroundColor: "rgba(0,0,0,1.0)",
+                data: counts,
+                fill: false
+            }]
+        },
+        options:{
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Openflow Packet-In Count every 5 seconds',
+                    font: {
+                        size:25
+                    }
+                }
+            },
+            scales: {
+
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Timestamp',
+                        font: {
+                            size:20
+                        }
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Count',
+                        font: {
+                            size: 20
+                        }
+                    }
+                }
+            }
+        }   
+    });
+
+</script>
+</body>
+</html>

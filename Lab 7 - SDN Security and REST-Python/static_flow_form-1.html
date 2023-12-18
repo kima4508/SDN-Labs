@@ -1,0 +1,31 @@
+<style>
+h2  {
+    color: rgb(5, 138, 247);
+ }
+</style>
+<div style="position: absolute;  top: 20%; left: 40%">
+<h2 > Add static flows</h2>
+<form action="{{ url_for('staticflows')}}" style="border: 1px;" method="post" border="1"> 
+    <label for="Datapath Id" >Data Path ID</label> <br> 
+    <input name="dpid" placeholder="00:00:00:00:00:00:00:01" id="dpid" type="text" required> <br><br>
+
+    <label for="Priority" >Priority</label> <br>
+    <input name="priority" id="priority" placeholder="32768"  min="0" type="number" required> <br><br>
+
+    <label for="In Port" >In Port</label> <br>
+    <input name="inPort" id="inPort" placeholder="1"  min="1"type="text" required> <br><br>
+
+    <label for="eth-type: " >Ethernet Type</label> <br>
+    <input name="ethType" id="ethType" type="text"  placeholder="0x800" required > <br><br>
+
+    <label for="Destination IP" >Destination IP</label> <br>
+    <input name="destintionIp" id="destinationIp" type="text" placeholder="10.10.10.10"  required><br><br> 
+
+    <label for="Action" >Action</label> <br>
+    <input name="action" placeholder="output=2" id="action" type="text" required><br><br>
+
+    <center><button type="submit">Submit</button> </center>
+</form> 
+</div>
+<div color= '#ff0000'> {{success}}</div>
+</center>

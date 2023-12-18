@@ -1,0 +1,102 @@
+
+
+<html> 
+<head>
+    <title> Push a Button - Routing</title>
+    <style>
+        .button1 {
+            background-color: #03234d;
+            border: none;
+            color: white;
+            font-size: 50px;
+            margin: 4px 2px;
+            font-size: 30px;
+            padding: 10px;
+            text-align: center
+        }
+        .button2 {
+            background-color: #4d1208;
+            border: none;
+            color: white;
+            font-size: 50px;
+            margin: 4px 2px;
+            font-size: 30px;
+            padding: 10px;
+            text-align: center
+        }
+        .button3 {
+            background-color: #06381c;
+            border: none;
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            margin: 4px 2px;
+            text-align: center
+        }
+        .button4 {
+            background-color: #47031e;
+            border: none;
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            margin: 4px 2px;
+            text-align: center
+        }
+        table, td, th {
+            border: 1px solid;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+    <div style="position: absolute;  top: 5%; left: 40%">
+        <h1 style="font-style: italic;font-family: 'Times New Roman';">
+            "Push of Button Routing"
+        </h1>
+    </div>
+    <div style="position: absolute;  top: 20%; left: 10%">
+        <div>
+            <a href=shortestPath >
+                <button class="button1">Shortest Path Routing</button>
+            </a>
+            <a href=longestPath >
+                <button class="button2">Longest Path Routing</button>
+            </a>
+            <a href=bestDelay >
+                <button class="button3">Low latency Path Routing</button>
+            </a>
+            <a href="ipv6" >
+                <button class="button4">IPV6 Routing</button>
+            </a>
+        </div>
+    </div>
+    <div style="position: absolute;  top: 30%; left: 25%">
+        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: italic;color: rgb(255, 17, 0); size: 10px;">
+            {{routing_status}}
+        </h2>
+        <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-style: normal;color: rgb(7, 78, 13); size: 10px;">
+            {{route}}
+        </h2>
+    </div>
+    <div style="position: absolute;  top: 50%; left: 35%;  display: table-row;visibility: {{visibility}} ;">
+            <a href="testTraffic" >
+                <button class="button4">Test Path of traffic</button>
+            </a>
+    </div>
+    <div style="position: absolute;  top: 60%; left: 25%; visibility: {{visibility}} ">
+        <h2>
+            ICMP : {{route_icmp}}
+        </h2>
+        <h2>
+            HTTP : {{route_http}}
+        </h2>
+    </div>
+
+
+</body>
+</html>
